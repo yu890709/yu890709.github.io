@@ -1,6 +1,13 @@
 ﻿<!DOCTYPE html>
 <html><head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8;">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("#aaa").click(function(){
+      $("#show").toggle();
+  });
+    </script>
+    
     <style>
       body {
         background-color:gray;
@@ -67,18 +74,18 @@
       <a href="#" style="color:white;margin-right:50 ;font-size:25;" title="其實沒東西">關於</a>
     </div>
     <!--改-->
-    <header style="opacity:0.86">
+    <header style="opacity:0.86" id="show">
       <h1 align="center">AndyYu的自我介紹</h1>
      
     </header>
-    <nav style="opacity:0.86"> 
+    <nav style="opacity:0.86" id="show"> 
       <p align="right" style="font-size:40px">
         <a href="#basicinformation" title="基本資料">基本資料</a>
         <a href="#interest" title="興趣">興趣</a>
         <a href="#Introduction" title="簡介">簡述</a>
       </p>
       </nav>
-    <section style="background-color:white;opacity:0.8">
+    <section style="background-color:white;opacity:0.8" id="show">
 <img src="https://grandorder.gamepress.gg/sites/grandorder/files/styles/servant_image/public/2017-07/Artoria4.png?itok=OmKQEsrL" alt="" width="375" align="right" class="br" style="margin-top:-70;">
       <div id="basicinformation" style="opacity:0.99;">
         <div class="subtitle">基本資料</div>
@@ -153,12 +160,14 @@
 
       </div>
     </section>
-    <footer style="opacity:0.99;">
+    <footer style="opacity:0.99;" id="show">
       <a href="https://www.facebook.com/profile.php?id=100000258939721" target="_blank" title="Facebook"><img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697057-facebook-512.png" alt="" width="75px" align="center">&nbsp;&nbsp;</a>
       <a href="#"><img src="https://www.gtec.tw/wp-content/uploads/2018/03/ig-icon-pink-00.png" alt="" width="60px" align="center">&nbsp;&nbsp;</a>
       <a href="#"><img src="https://upload.wikimedia.org/wikipedia/zh/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png" alt="" width="60px" align="center"></a>
 
     </footer>
+
+<button id="aaa">show/hide</button>
   
 
 </body></html>
