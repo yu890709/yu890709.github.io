@@ -11,10 +11,17 @@
   crossorigin="anonymous"></script>
     <script>
 	 $(document).ready(function(){
-	 	$("#ch").click(function(){
+	 	$("#sw1").click(function(){
+      $("body").css("background-image","url( ' http://www.tokkoro.com/thumbs/5081511-fategrand-order-saber-alter.jpg ' )");
+  });
+		 $("#sw2").click(function(){
       $("body").css("background-image","url( ' https://www.imgbase.info/images/safe-wallpapers/anime/fate_stay_night/56031_fate_stay_night_saber.jpg ' )");
   });
-		 $("#sw1").click(function(){
+		  $("#sw3").click(function(){
+      $("body").css("background-image","url( ' http://images6.fanpop.com/image/photos/40600000/Saber-stay-night-fate-series-40640341-1600-900.jpg ' )");
+  });
+		 
+		 $("#ch").click(function(){
       $("#sh").toggle();
   });
 	 $("#myimg").click(function(){
@@ -107,18 +114,18 @@
       <a href="#" style="color:white;margin-right:50 ;font-size:25;" title="其實沒東西">關於</a>
     </div>
     <!--改-->
-    <header style="opacity:0.86">
+    <header style="opacity:0.95">
       <h1 align="center">AndyYu的自我介紹</h1>
      
     </header>
-    <nav style="opacity:0.86"> 
+    <nav style="opacity:0.95"> 
       <p align="right" style="font-size:40px">
         <a href="#basicinformation" title="基本資料">基本資料</a>
         <a href="#interest" title="興趣">興趣</a>
         <a href="#Introduction" title="簡介">簡述</a>
       </p>
       </nav>
-    <section style="background-color:white;opacity:0.8" >
+    <section style="background-color:white;opacity:0.95" >
 <img src="https://grandorder.gamepress.gg/sites/grandorder/files/styles/servant_image/public/2017-07/Artoria4.png?itok=OmKQEsrL" alt="" width="375" align="right" class="br" style="z-index:1;position:absolute;right:175px" title="點一下" id="myimg">
       <div id="basicinformation" style="opacity:0.99;">
         <div class="subtitle">基本資料</div>
@@ -202,7 +209,8 @@
 	  </div>
     <button id="ch">show/hide</button>
     <button id="sw1">圖1</button>
-	 
+    <button id="sw2">圖2</button>
+    <button id="sw3">圖3</button>
 
 
   
