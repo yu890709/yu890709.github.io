@@ -110,6 +110,65 @@
   <script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/util.js"></script><script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/pagejs.js"></script></head>
 
   <body>
+	
+	  
+	  
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2307359052665421',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v3.3'
+    });
+      
+    FB.AppEvents.logPageView();  
+	  
+    FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+	  
+    function login() {
+  FB.login(function (response) {
+    console.log(response);
+    if (response.status === "connected") {
+      FB.api('/me', {
+        'fields': 'id,name,email,picture'
+      }, function (response) {
+        console.log(response);
+      });
+    }
+    
+  }, {
+      scope: 'email',
+      auth_type: 'rerequest'
+    });
+}
+	  
+  function checkLoginState() {
+  FB.getLoginStatus(function (response) {
+    if(response.status === 'connected'){
+      console.log('你已經登入囉')
+    }else{
+      login()
+    }
+  });
+}
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+	  
+	  
+	
+	  
 	  <div id="sh">
     <!--改--> 
     <a href="https://yu890709.github.io" style="font-weight:bold ;color:#33FFFF;font-style:italic;text-decoration:none;font-size:55;" id="top">yu890709.github.io</a>
@@ -211,7 +270,8 @@
       <a href="https://www.facebook.com/profile.php?id=100000258939721" target="_blank" title="Facebook"><img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697057-facebook-512.png" alt="" width="75px" align="center">&nbsp;&nbsp;</a>
       <a href="#"><img src="https://www.gtec.tw/wp-content/uploads/2018/03/ig-icon-pink-00.png" alt="" width="60px" align="center">&nbsp;&nbsp;</a>
       <a href="#"><img src="https://upload.wikimedia.org/wikipedia/zh/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png" alt="" width="60px" align="center"></a>
-
+      <button onclick="login()">登入</button>
+      <button onclick="checkLoginState()">登入</button>
     </footer> 
 	  </div>
     <button id="ch">show/hide</button>
